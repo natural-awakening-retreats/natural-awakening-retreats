@@ -1,0 +1,30 @@
+<div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-purple text-white p-4 text-sm z-50 hidden">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-center sm:text-left">
+        We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
+        <a href="/privacy-policy" class="underline hover:text-gold">Learn more</a>.
+      </p>
+      <button
+        id="cookie-accept"
+        class="bg-gold text-black font-bold py-2 px-4 rounded-full hover:bg-blue transition"
+      >
+        Accept
+      </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const accept = document.getElementById("cookie-accept");
+  
+        if (!localStorage.getItem("cookieAccepted")) {
+          banner.classList.remove("hidden");
+        }
+  
+        accept.addEventListener("click", function () {
+          localStorage.setItem("cookieAccepted", "true");
+          banner.classList.add("hidden");
+        });
+      });
+    </script>
+</div>
+  

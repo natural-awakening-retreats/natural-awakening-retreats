@@ -1,0 +1,5 @@
+title: Natural Awakening Retreats
+baseurl: ""   # if its root
+url: "https://natural-awakening-retreats.github.io" # if you are testing locally
+markdown: kramdown
+plugins: []

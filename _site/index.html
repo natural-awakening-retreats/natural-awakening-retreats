@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The (open) Hub in Lisboa</title>
+  
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bely+Display&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  
+    <!-- Tailwind custom config inline (optional) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ["Bely Display", "serif"],
+              body: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              gold: "#FCBF00",
+              blue: "#009FE3",
+              magenta: "#E50051",
+              purple: "#340C46",
+              darkbg: "#1a1a1a",
+              card: "#262626",
+              cardhover: "#1f1f1f",
+            },
+          },
+        },
+      };
+    </script>
+  
+    <link rel="stylesheet" href="/styles/base.css" />
+</head>
+  <body class="bg-darkbg text-white font-body">
+    <!-- _includes/hero.html -->
+<section class="relative bg-gradient-to-r from-purple to-magenta text-center pt-20 pb-32">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
+      <img src="/assets/images/logo.png" alt="(open) Hub logo" class="h-40 w-auto object-contain mb-6" />
+      <h1 class="mb-4 font-body font-bold text-[60px] text-white text-center">
+        The (open) Hub in Lisboa
+      </h1>
+      <p class="max-w-3xl">
+        We’re a group of open-minded people, gathering to discuss non-monogamy &amp; relationships
+      </p>
+      <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-8">
+        <a href="#community" class="btn-gold">Join Our Community</a>
+        <a href="#resources" class="btn-blue">Explore Resources</a>
+      </div>
+    </div>
+  
+    <!-- WAVE TRANSITION -->
+    <div class="wave-container absolute bottom-0 left-0 w-full">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#1a1a1a" d="M0,60 C 360,0 1080,120 1440,60 L1440,100 L0,100 Z" />
+      </svg>
+    </div>
+</section>
+
+<main class="bg-darkbg pt-24 pb-16 md:pt-32 md:pb-24 space-y-16">
+  <section id="about" class="max-w-5xl mx-auto px-4 -mt-16">
+    <h2 class="mb-6">About Us</h2>
+    <p class="mb-6">
+      We are a grassroots, volunteer-led group dedicated to advancing awareness and acceptance of non-monogamy in Lisboa.
+      Our mission is to create a safe space where everyone can explore, learn, and share about relationships in all their forms.
+    </p>
+    <p>
+      By hosting events, sharing resources, and connecting like-minded individuals, we aim to foster a community built on respect,
+      inclusivity, and openness.
+    </p>
+</section>
+  <section id="community" class="relative bg-purple pt-20 pb-40 text-white">
+    <!-- Top wave between About Us and Community-->
+    <div class="wave-container absolute top-0 left-0 w-full rotate-180">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#1a1a1a" d="M0,60 C 360,0 1080,120 1440,60 L1440,100 L0,100 Z" />
+      </svg>
+    </div>
+  
+    <div class="relative z-10 max-w-5xl mx-auto px-4 space-y-8">
+      <h2 class="mb-6">Community</h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card">
+    <h3 class="mb-4 text-h3">WhatsApp Community Group</h3>
+    <div class="bg-white p-4 rounded-lg mb-4">
+      <img src="/assets/images/whatsapp_qr.png" alt="WhatsApp QR Code" class="w-full" />
+    </div>
+    <a href="https://chat.whatsapp.com/LImu74fVfUuH0bpcWqk1qB" class="link-icon">
+      <i class="ri-whatsapp-line"></i> WhatsApp Group Invite
+    </a>
+</div>
+        <div class="card-box bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white text-center flex flex-col items-center justify-center gap-4 h-full">
+  <h3 class="text-2xl font-bold">Follow Us on Instagram</h3>
+  <p class="text-lg">
+    Instagram: <span class="font-semibold">@theopenhub</span>
+  </p>
+  <a href="https://www.instagram.com/theopenhub" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group">
+    <i class="ri-instagram-line text-[2.5rem]"></i>
+    <span class="text-white group-hover:underline">See our page</span>
+  </a>
+</div>
+
+        <div class="card">
+    <h3 class="mb-4">Events Calendar</h3>
+    <a href="https://calendar.google.com/calendar/u/0?cid=Nzg3MWM2ZTJkMjc1NzViYWM0YjY2MDU1YTBiZTlhOWM5YWIwZDljYWFkM2UwMzc4MDczZjg3NTkzOGJkNzk4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" class="link-icon">
+      <i class="ri-calendar-line"></i>
+      View our calendar
+    </a>
+</div>
+  
+        <div class="card">
+    <h3 class="mb-4">The Buddy System</h3>
+    <p class="mb-4">Find a buddy to go to events with 😊</p>
+    <a href="https://docs.google.com/forms/d/1wMqwFCr3Qqzwio_KyR2KhwX8MuaPQPWGOulDXXWZIh0/edit?pli=1" class="link-icon">
+      <i class="ri-user-add-line"></i>
+      (open) Buddy Registration
+    </a>
+</div>
+  
+      </div>
+    </div>
+  
+    <!-- Bottom wave -->
+    <div class="wave-container absolute bottom-0 left-0 w-full">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#1a1a1a" d="M0,60 C 360,0 1080,120 1440,60 L1440,100 L0,100 Z" />
+      </svg>
+    </div>
+</section>
+  
+  <section class="bg-darkbg pt-10 pb-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="mb-6">Give Us Feedback!</h2>
+      <div class="card-box">
+        <a href="https://docs.google.com/forms/d/11zQwgFHfX5NU60SFm4w_uFfDwpZsb4QLRcpA7IXUNDQ/edit#responses" class="link-block">Feedback form (ENG)</a>
+        <a href="https://docs.google.com/forms/d/11AaB3Q0RXsSDMJjOiIBanISxVZm7UX-qJDdjII8XjhE/edit#responses" class="link-block">Formulário de feedback (PT)</a>
+      </div>
+    </div>
+</section>
+  <section class="bg-darkbg py-2 text-white">
+    <div class="max-w-5xl mx-auto px-4 space-y-5" id="resources">
+      <h2 class="mb-6">Resources</h2>
+  
+      <!-- Top Resource Links -->
+      <div class="card-box">
+        <ul class="space-y-4">
+          <li>
+            <a href="https://openlisboa.notion.site/Community-Guidelines-de57f7ca76b842ff8ce05b8b85277323" class="link-block">
+              Community Guidelines
+            </a>
+          </li>
+          <li>
+            <a href="https://openlisboa.notion.site/Therapists-recommendations-193f250f481a80a7a891cbc14788700b?pvs=74" class="link-block">
+              Therapists recommendations
+            </a>
+          </li>
+          <li>
+            <a href="https://openlisboa.notion.site/2024-end-of-year-message-from-Open-Hub-164f250f481a8028a40bd5509612dc0e?pvs=74" class="link-block">
+              2024 end-of-year message from Open Hub
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Useful Links + Influencers -->
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <!-- Useful Links -->
+        <div>
+          <h3 class="mt-10 mb-4 text-h3">Useful Links</h3>
+          <div class="card-box">
+            <ul class="space-y-4">
+              <li><a href="https://docs.google.com/document/d/1CbTGOKaVS1-oIjzh_J-N9GhB2AkJywXB4nRwPxd2XWs/edit?usp=sharing" class="link-block">🧪 Free Sexual Health Testing in Lisbon</a></li>
+              <li><a href="https://www.multiamory.com/" class="link-block">🎧 Multiamory Podcast</a></li>
+              <li><a href="https://www.estherperel.com/podcast" class="link-block">🎧 Esther Perel – Where should we begin?</a></li>
+              <li><a href="https://savage.love/lovecast/" class="link-block">🎧 Savage Lovecast</a></li>
+              <li><a href="https://www.multiamory.com/podcast/339-the-smorgasbord-of-relationships" class="link-block">Smorgasbord of Relationships</a></li>
+              <li><a href="https://www.maketimeforthetalk.com/about" class="link-block">STARS Talk framework for new partnerships</a></li>
+              <li><a href="https://www.polyamory.org.uk/?page_id=104" class="link-block">List of non-monogamy terms</a></li>
+              <li><a href="https://www.reddit.com/r/relationshipanarchy/comments/pwkopx/relationship_menu_my_take_on_the_smorgasbord/" class="link-block">Relationship Menu</a></li>
+              <li><a href="https://www.multiamory.com/radar" class="link-block">RADAR Monthly Check-in</a></li>
+              <li><a href="https://theangrynoodle.com/5-tips-for-writing-polyamory/" class="link-block">Tips for writing about Polyamory</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Influencers -->
+        <div>
+          <h3 class="mt-10 mb-4 text-h3">Influencers to Follow</h3>
+          <div class="card-box">
+            <ul class="space-y-4">
+              <li><a href="https://www.instagram.com/decolonizing.love" class="link-block"><i class="ri-instagram-line"></i> @decolonizing.love</a></li>
+              <li><a href="https://www.instagram.com/polyphiliablog" class="link-block"><i class="ri-instagram-line"></i> @polyphiliablog</a></li>
+              <li><a href="https://gabalexa.com/links" class="link-block"><i class="ri-instagram-line"></i> @gabalexa</a></li>
+              <li><a href="https://linktr.ee/polyamfam" class="link-block"><i class="ri-instagram-line"></i> @polyamfam</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</main>
+
+<div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-purple text-white p-4 text-sm z-50 hidden">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-center sm:text-left">
+        We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
+        <a href="/privacy-policy" class="underline hover:text-gold">Learn more</a>.
+      </p>
+      <button id="cookie-accept" class="bg-gold text-black font-bold py-2 px-4 rounded-full hover:bg-blue transition">
+        Accept
+      </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const accept = document.getElementById("cookie-accept");
+  
+        if (!localStorage.getItem("cookieAccepted")) {
+          banner.classList.remove("hidden");
+        }
+  
+        accept.addEventListener("click", function () {
+          localStorage.setItem("cookieAccepted", "true");
+          banner.classList.add("hidden");
+        });
+      });
+    </script>
+</div>
+
+<!-- _includes/footer.html -->
+<footer class="bg-purple py-8 text-center text-white text-sm">
+    <p>
+      &copy; 2025 The (open) Hub in Lisboa — All rights reserved.
+    </p>
+    <p>
+      Follow us on Instagram:
+      <a href="https://instagram.com/theopenhub" class="text-gold hover:underline">@theopenhub</a>
+    </p>
+</footer>
+
+
+  </body>
+</html>

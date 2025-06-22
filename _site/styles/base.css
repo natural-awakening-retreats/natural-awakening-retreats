@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Bely Display", serif;
+  font-size: 60px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+}
+
+/* Utility classes */
+.wave-container svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+/* Buttons */
+/* Gold Button */
+.btn-gold {
+  display: inline-block;
+  background-color: #FCBF00;
+  color: #1a1a1a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-gold:hover {
+  background-color: #d6a600; /* darker gold */
+  box-shadow: 0 4px 10px rgba(252, 191, 0, 0.4);
+  transform: scale(1.03);
+}
+
+/* Blue Button */
+.btn-blue {
+  display: inline-block;
+  background-color: #009FE3;
+  color: #1a1a1a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-blue:hover {
+  background-color: #007fb8; /* deeper blue */
+  box-shadow: 0 4px 10px rgba(0, 159, 227, 0.4);
+  transform: scale(1.03);
+}
+
+/* Cards */
+.card-box {
+  transition: all 0.3s;
+  border: 1px solid #3f3f3f;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: #262626;
+}
+.card-box:hover {
+  border-color: #6b7280;
+}
+
+.card {
+    transition: all 0.3s;
+    border: 1px solid #3f3f3f;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: #262626;
+}
+.card:hover {
+    border-color: #6b7280;
+}  
+
+/* Resource Links & Block Links */
+.link-block,
+.resource-link {
+  color: #009FE3;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.link-block:hover,
+.resource-link:hover {
+  background-color: #1f1f1f;
+  text-decoration: underline;
+}
+
+/* Icon Links */
+.link-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #009FE3;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.link-icon:hover {
+  border-bottom-color: #009FE3;
+}

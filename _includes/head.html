@@ -1,0 +1,40 @@
+<!-- _includes/head.html -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The (open) Hub in Lisboa</title>
+  
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bely+Display&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  
+    <!-- Tailwind custom config inline (optional) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: ["Bely Display", "serif"],
+              body: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              gold: "#FCBF00",
+              blue: "#009FE3",
+              magenta: "#E50051",
+              purple: "#340C46",
+              darkbg: "#1a1a1a",
+              card: "#262626",
+              cardhover: "#1f1f1f",
+            },
+          },
+        },
+      };
+    </script>
+  
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/base.css" />
+</head>
