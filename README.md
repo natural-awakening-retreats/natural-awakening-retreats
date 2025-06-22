@@ -1,6 +1,6 @@
 # Natural Awakening Retreats
 
-> An amazing retreat.
+> Natural Awakening Retreats made for you with love.
 
 This is the source code for the official (open) Hub website, built using [Jekyll](https://jekyllrb.com/) and deployed via [GitHub Pages](https://pages.github.com/). The site is modular, responsive, and uses [Tailwind CSS](https://tailwindcss.com/) via CDN.
 
