@@ -1,6 +1,6 @@
-# The (open) Hub in Lisboa
+# Natural Awakening Retreats
 
-> A community-led initiative to gather open-minded people to explore non-monogamy, relationships, and personal growth.
+> An amazing retreat.
 
 This is the source code for the official (open) Hub website, built using [Jekyll](https://jekyllrb.com/) and deployed via [GitHub Pages](https://pages.github.com/). The site is modular, responsive, and uses [Tailwind CSS](https://tailwindcss.com/) via CDN.
 
