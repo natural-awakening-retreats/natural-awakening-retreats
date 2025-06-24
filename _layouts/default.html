@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   {% include head.html %}
-  <body class="bg-darkbg text-white font-body">
-    {{ content }}
-  </body>
+</head>
+<body>
+  {{ content }}
+  {% include cookie-banner.html %}
+  {% include footer.html %}
+</body>
 </html>
