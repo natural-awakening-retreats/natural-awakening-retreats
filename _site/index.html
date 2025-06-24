@@ -550,36 +550,109 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-  <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-purple text-white p-4 text-sm z-50 hidden">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-center sm:text-left">
-        We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
-        <a href="/privacy-policy" class="underline hover:text-gold">Learn more</a>.
-      </p>
-      <button
-        id="cookie-accept"
-        class="bg-gold text-black font-bold py-2 px-4 rounded-full hover:bg-blue transition"
-      >
-        Accept
-      </button>
+  <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 z-50 hidden">
+    <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/20">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4">
+            
+            <!-- Cookie Icon -->
+            <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 7a1 1 0 11-2 0 1 1 0 012 0zm2 6a1 1 0 11-2 0 1 1 0 012 0zm4-3a1 1 0 11-2 0 1 1 0 012 0z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 text-white">
+                <h3 class="font-semibold text-lg mb-2">🍪 We value your privacy</h3>
+                <p class="text-sm opacity-90 leading-relaxed">
+                    We use cookies to enhance your browsing experience and analyze our traffic. 
+                    <a href="/privacy-policy" class="text-amber-300 hover:text-amber-200 underline underline-offset-2 transition-colors">
+                        Learn more about our privacy practices
+                    </a>
+                </p>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <button 
+                    id="cookie-decline"
+                    class="px-6 py-3 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 text-sm font-medium hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                    Decline
+                </button>
+                <button 
+                    id="cookie-accept"
+                    class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full font-semibold text-sm hover:transform hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                >
+                    Accept All
+                </button>
+            </div>
+        </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("cookie-banner");
-        const accept = document.getElementById("cookie-accept");
-  
-        if (!localStorage.getItem("cookieAccepted")) {
-          banner.classList.remove("hidden");
-        }
-  
-        accept.addEventListener("click", function () {
-          localStorage.setItem("cookieAccepted", "true");
-          banner.classList.add("hidden");
-        });
-      });
-    </script>
 </div>
-  
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const declineBtn = document.getElementById("cookie-decline");
+
+    // Show banner with delay for better UX
+    setTimeout(() => {
+        try {
+            if (!localStorage.getItem("cookieAccepted") && !localStorage.getItem("cookieDeclined")) {
+                banner.classList.remove("hidden");
+                banner.style.animation = "slideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+            }
+        } catch (e) {
+            banner.classList.remove("hidden");
+        }
+    }, 1000);
+
+    // Accept cookies
+    acceptBtn.addEventListener("click", function () {
+        try {
+            localStorage.setItem("cookieAccepted", "true");
+        } catch (e) {
+            // Ignore localStorage errors
+        }
+        hideBanner();
+    });
+
+    // Decline cookies
+    declineBtn.addEventListener("click", function () {
+        try {
+            localStorage.setItem("cookieDeclined", "true");
+        } catch (e) {
+            // Ignore localStorage errors
+        }
+        hideBanner();
+    });
+
+    function hideBanner() {
+        banner.style.transform = "translateY(100%)";
+        banner.style.opacity = "0";
+        setTimeout(() => {
+            banner.classList.add("hidden");
+        }, 300);
+    }
+});
+</script>
+
+<style>
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
   <!-- _includes/footer.html -->
 <footer class="bg-darkgray py-8 text-center text-black text-sm">
     <p>
