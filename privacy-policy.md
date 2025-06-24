@@ -4,7 +4,7 @@ title: Privacy Policy
 permalink: /privacy-policy
 ---
 
-<section class="max-w-4xl mx-auto px-4 py-16 text-white">
+<section class="max-w-4xl mx-auto px-4 py-16 text-gray-900">
   <h1 class="text-h1 mb-6">Privacy Policy</h1>
 
   <p class="mb-4">
@@ -12,14 +12,14 @@ permalink: /privacy-policy
   </p>
 
   <p class="mb-4">
-    We do not collect personal data unless you explicitly provide it (e.g., through a feedback form).
+    We do not collect personal data unless you explicitly provide it (e.g., through our contact or feedback forms).
   </p>
 
   <p class="mb-4">
-    Data shared with third-party services (e.g., Instagram or Google Forms) is subject to their own privacy policies.
+    Data shared with third-party services (specifically Jotform for our contact forms) is subject to their own privacy policies. You can review <a href="https://www.jotform.com/privacy/" class="text-blue-600 hover:text-blue-800 underline">Jotform's privacy policy</a> for more information.
   </p>
 
   <p>
-    For any questions, feel free to contact us through our community channels.
+    For any questions about this privacy policy, please contact us through our available channels.
   </p>
 </section>

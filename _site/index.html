@@ -550,13 +550,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-  <div id="cookie-banner" class="fixed bottom-6 left-6 right-6 z-50 hidden">
-    <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/20">
+  <!-- Modern Cookie Banner -->
+<div id="cookie-banner" class="fixed bottom-6 left-6 right-6 z-50 hidden">
+    <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-gray-200">
         <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4">
             
             <!-- Cookie Icon -->
             <div class="flex-shrink-0">
-                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 7a1 1 0 11-2 0 1 1 0 012 0zm2 6a1 1 0 11-2 0 1 1 0 012 0zm4-3a1 1 0 11-2 0 1 1 0 012 0z"/>
                     </svg>
@@ -564,11 +565,11 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <!-- Content -->
-            <div class="flex-1 text-white">
-                <h3 class="font-semibold text-lg mb-2">🍪 We value your privacy</h3>
-                <p class="text-sm opacity-90 leading-relaxed">
+            <div class="flex-1 text-gray-800">
+                <h3 class="font-semibold text-lg mb-2 text-gray-900">🍪 We value your privacy</h3>
+                <p class="text-sm leading-relaxed text-gray-700">
                     We use cookies to enhance your browsing experience and analyze our traffic. 
-                    <a href="/privacy-policy" class="text-amber-300 hover:text-amber-200 underline underline-offset-2 transition-colors">
+                    <a href="/privacy-policy" class="text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors font-medium">
                         Learn more about our privacy practices
                     </a>
                 </p>
@@ -578,13 +579,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <button 
                     id="cookie-decline"
-                    class="px-6 py-3 text-white border border-white/30 rounded-full hover:bg-white/10 transition-all duration-300 text-sm font-medium hover:transform hover:-translate-y-0.5 hover:shadow-lg"
+                    class="px-6 py-3 text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-all duration-300 text-sm font-medium hover:transform hover:-translate-y-0.5 hover:shadow-lg"
                 >
                     Decline
                 </button>
                 <button 
                     id="cookie-accept"
-                    class="px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full font-semibold text-sm hover:transform hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                    class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-sm hover:transform hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 hover:from-blue-700 hover:to-purple-700"
                 >
                     Accept All
                 </button>
@@ -594,15 +595,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("cookie-accept");
     const declineBtn = document.getElementById("cookie-decline");
+    const learnMoreLink = document.querySelector('a[href="/privacy-policy"]');
 
     // Show banner with delay for better UX
     setTimeout(() => {
         try {
-            if (!localStorage.getItem("cookieAccepted") && !localStorage.getItem("cookieDeclined")) {
+            if (!localStorage.getItem("cookieAccepted") && !localStorage.getItem("cookieDeclined") && !localStorage.getItem("cookieBannerSeen")) {
                 banner.classList.remove("hidden");
                 banner.style.animation = "slideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
             }
@@ -615,21 +617,41 @@ document.addEventListener("DOMContentLoaded", function () {
     acceptBtn.addEventListener("click", function () {
         try {
             localStorage.setItem("cookieAccepted", "true");
+            localStorage.setItem("cookieBannerSeen", "true");
+            // Enable all cookies/tracking here
+            console.log("Cookies accepted - enabling all tracking");
         } catch (e) {
             // Ignore localStorage errors
         }
         hideBanner();
+        showNotification("✅ Cookie preferences saved!", "green");
     });
 
     // Decline cookies
     declineBtn.addEventListener("click", function () {
         try {
             localStorage.setItem("cookieDeclined", "true");
+            localStorage.setItem("cookieBannerSeen", "true");
+            // Disable non-essential cookies here
+            console.log("Cookies declined - disabling non-essential tracking");
         } catch (e) {
             // Ignore localStorage errors
         }
         hideBanner();
+        showNotification("🍪 Only essential cookies enabled", "blue");
     });
+
+    // Learn more clicked - hide banner but don't save preference
+    if (learnMoreLink) {
+        learnMoreLink.addEventListener("click", function () {
+            try {
+                localStorage.setItem("cookieBannerSeen", "true");
+            } catch (e) {
+                // Ignore localStorage errors
+            }
+            hideBanner();
+        });
+    }
 
     function hideBanner() {
         banner.style.transform = "translateY(100%)";
@@ -638,7 +660,30 @@ document.addEventListener("DOMContentLoaded", function () {
             banner.classList.add("hidden");
         }, 300);
     }
-});
+
+    function showNotification(message, color) {
+        const notification = document.createElement("div");
+        notification.innerHTML = message;
+        notification.className = `fixed top-4 right-4 px-4 py-2 rounded-lg text-white font-medium z-50 transform transition-all duration-300 ${
+            color === "green" ? "bg-green-500" : "bg-blue-500"
+        }`;
+        
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = "translateX(0)";
+        }, 100);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.style.transform = "translateX(100%)";
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+  });
 </script>
 
 <style>
