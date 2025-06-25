@@ -1,39 +1,65 @@
-<!--Gradient Divider-->
-<div class=" absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#c7c6c1] z-0"></div>
+<!-- Gradient Divider -->
+<div class="absolute bottom-0 left-0 right-0 h-16 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-[#c7c6c1] z-0"></div>
 
-<section id="about" class="relative text-black py-32 px-6 text-center overflow-hidden">
-  <!-- Background -->
+<!-- About Section -->
+<section id="about" class="relative text-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 text-center overflow-hidden">
+  <!-- Background Image -->
   <img 
-    src="/assets/images/about-bg.png" 
+    src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
     alt="" 
-    class="absolute inset-0 w-full h-full object-cover opacity-60 brightness-75 pointer-events-none z-0" 
+    class="absolute inset-0 w-full h-full object-cover opacity-50 sm:opacity-60 brightness-75 pointer-events-none z-0" 
   />
 
-  <!-- Beige transparent overlay over entire section -->
-  <div class="absolute inset-0 bg-[#efede3]/60 backdrop-blur-sm z-0"></div>
+  <!-- Beige overlay - Adjusted opacity for mobile -->
+  <div class="absolute inset-0 bg-[#efede3]/70 sm:bg-[#efede3]/60 backdrop-blur-sm z-0"></div>
 
-  <!-- Foreground content -->
-  <div class="relative max-w-2xl mx-auto space-y-6 z-10 px-6 ">
-    <h2 class="text-4xl md:text-5xl font-heading mb-6">Retreat, Reconnect, Realign</h2>
-    <p class="text-lg leading-relaxed">
+  <!-- Content -->
+  <div class="relative max-w-2xl mx-auto space-y-4 sm:space-y-6 z-10 px-4 sm:px-6">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading mb-4 sm:mb-6 leading-tight">
+      Retreat, Reconnect, Realign
+    </h2>
+    
+    <p class="text-base sm:text-lg leading-relaxed">
       Step away from the noise of everyday life and give yourself four days of intentional renewal.
-      This retreat is an invitation to pause, breathe deeply, and rediscover the person you’re meant to be.
+      This retreat is an invitation to pause, breathe deeply, and rediscover the person you're meant to be.
     </p>
-    <p class="text-lg leading-relaxed">
+    
+    <p class="text-base sm:text-lg leading-relaxed">
       Each day blends <strong>guided sessions</strong>, <strong>creative outlets</strong>, and
-      <strong>shared moments in nature</strong>. You’ll connect with like-minded souls, gain clarity,
+      <strong>shared moments in nature</strong>. You'll connect with like-minded souls, gain clarity,
       and walk away with tools to support your well-being long after the retreat ends.
     </p>
-    <p class="text-lg leading-relaxed font-semibold">
+    
+    <p class="text-base sm:text-lg leading-relaxed font-semibold">
       Are you ready to reconnect? Your next chapter begins here.
     </p>
   </div>
 
-   <!-- Wave transition at the bottom of about section -->
-  <div class="absolute bottom-0 left-0 right-0 h-16 overflow-hidden">
+  <!-- Wave transition - Responsive height -->
+  <div class="absolute bottom-0 left-0 right-0 h-12 sm:h-16 overflow-hidden">
     <svg class="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 80" preserveAspectRatio="none">
-      <!-- Wave that flows from about section to facilitators section -->
       <path d="M0,20 C400,60 800,10 1200,40 L1200,80 L0,80 Z" fill="#ebe9e0"/>
     </svg>
   </div>
 </section>
+
+<!-- Mobile Navigation Menu (Fixed at bottom on mobile) -->
+<nav class="sm:hidden fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-md text-white z-50">
+  <div class="flex justify-around py-3 text-xs">
+    <a href="#about" class="flex flex-col items-center space-y-1 hover:text-orange-200 transition-colors">
+      <span>About</span>
+    </a>
+    <a href="#facilitators" class="flex flex-col items-center space-y-1 hover:text-orange-200 transition-colors">
+      <span>Facilitators</span>
+    </a>
+    <a href="#location" class="flex flex-col items-center space-y-1 hover:text-orange-200 transition-colors">
+      <span>Location</span>
+    </a>
+    <a href="#pricing" class="flex flex-col items-center space-y-1 hover:text-orange-200 transition-colors">
+      <span>Pricing</span>
+    </a>
+    <a href="#who-are-we" class="flex flex-col items-center space-y-1 text-orange-200">
+      <span>Who We Are</span>
+    </a>
+  </div>
+</nav>
