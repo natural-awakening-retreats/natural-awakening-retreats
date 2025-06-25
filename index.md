@@ -4,8 +4,7 @@ layout: default
 
 {% include hero.html %}
 {% include about.html %}
-<!--Gradient Divider-->
-<div class="h-16 bg-gradient-to-b from-transparent to-[#dcdbd1]"></div>
+
 <section id="facilitators">
   {% include facilitator_right.html
     name="Ana Jones"
