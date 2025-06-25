@@ -1,88 +1,199 @@
-<section id= pricing class="bg-[#f8f5ec] text-black py-20 px-6 md:px-20">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+<section id="pricing" class="relative bg-gradient-to-br from-[#f8f5ec] via-[#faf7f0] to-[#f8f5ec] text-black py-20 px-6 md:px-20 overflow-hidden">
+  
+  <!-- Enhanced floating background elements with more visual interest -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Larger organic shapes -->
+    <div class="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-[#ddb167]/15 to-[#e9c68d]/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-[#e9c68d]/15 to-[#6e5843]/8 rounded-full blur-3xl animate-pulse" style="animation-delay: 700ms;"></div>
+    <div class="absolute top-1/2 left-1/3 w-48 h-48 bg-gradient-to-br from-[#6e5843]/10 to-[#ddb167]/8 rounded-full blur-3xl animate-pulse" style="animation-delay: 1000ms;"></div>
+    
+    <!-- Additional flowing shapes -->
+    <div class="absolute top-32 right-1/3 w-40 h-40 bg-gradient-to-br from-[#e9c68d]/12 to-transparent rounded-full blur-2xl animate-pulse" style="animation-delay: 1500ms;"></div>
+    <div class="absolute bottom-32 left-1/4 w-56 h-56 bg-gradient-to-br from-[#ddb167]/8 to-[#6e5843]/12 rounded-full blur-3xl animate-pulse" style="animation-delay: 2000ms;"></div>
+    
+    <!-- Subtle geometric elements -->
+    <div class="absolute top-1/4 right-20 w-32 h-32 border border-[#ddb167]/20 rounded-full animate-spin" style="animation-duration: 20s;"></div>
+    <div class="absolute bottom-1/4 left-16 w-24 h-24 border border-[#e9c68d]/15 rounded-full animate-spin" style="animation-duration: 15s; animation-direction: reverse;"></div>
+    
+    <!-- Flowing lines -->
+    <svg class="absolute top-0 left-0 w-full h-full opacity-5" viewBox="0 0 1000 1000">
+      <path d="M0,300 Q250,200 500,300 T1000,300" stroke="url(#gradient1)" stroke-width="2" fill="none">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite" 
+                 values="M0,300 Q250,200 500,300 T1000,300;M0,350 Q250,250 500,350 T1000,350;M0,300 Q250,200 500,300 T1000,300"/>
+      </path>
+      <path d="M0,600 Q250,500 500,600 T1000,600" stroke="url(#gradient2)" stroke-width="1.5" fill="none">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" 
+                 values="M0,600 Q250,500 500,600 T1000,600;M0,650 Q250,550 500,650 T1000,650;M0,600 Q250,500 500,600 T1000,600"/>
+      </path>
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#ddb167;stop-opacity:0.3"/>
+          <stop offset="50%" style="stop-color:#e9c68d;stop-opacity:0.1"/>
+          <stop offset="100%" style="stop-color:#6e5843;stop-opacity:0.2"/>
+        </linearGradient>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#e9c68d;stop-opacity:0.2"/>
+          <stop offset="50%" style="stop-color:#ddb167;stop-opacity:0.1"/>
+          <stop offset="100%" style="stop-color:#6e5843;stop-opacity:0.15"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-start">
 
     <!-- LEFT: Pricing + CTA -->
     <div class="space-y-8">
-      <div class="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
-        <p class="uppercase tracking-wider text-sm text-[#6e5843] font-medium text-center md:text-left">Shared Room</p>
-        <p class="text-4xl font-bold text-[#3d2c15] text-center md:text-left">€825</p>
-        <div class="h-[2px] w-12 bg-[#ddb167] mx-auto md:mx-0 my-4"></div>
-        <p class="text-base text-[#4b3a2f] text-center md:text-left">For 3 nights, all meals, workshops & beach transport included</p>
+      <div class="group bg-white/80 backdrop-blur-lg border border-white/30 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+        <!-- Hover effect overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 via-transparent to-[#e9c68d]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10">
+          <p class="uppercase tracking-wider text-sm text-[#6e5843] font-medium text-center md:text-left mb-2">Shared Room</p>
+          <p class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#3d2c15] to-[#6e5843] bg-clip-text text-transparent text-center md:text-left">€775</p>
+          <div class="h-[3px] w-16 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] mx-auto md:mx-0 my-6 rounded-full"></div>
+          <p class="text-lg text-[#4b3a2f] text-center md:text-left leading-relaxed">For 3 nights, all meals, workshops & beach transport included</p>
+        </div>
       </div>
 
       <div class="text-center md:text-left">
-        <a href="https://form.jotform.com/251473996860067" class="inline-block bg-[#e9c68d] hover:bg-[#ddb167] text-black font-semibold px-6 py-3 rounded-full shadow-sm transition">
-          Reserve Now
+        <a href="https://form.jotform.com/251473996860067" class="group inline-flex items-center gap-3 bg-gradient-to-r from-[#e9c68d] to-[#ddb167] hover:from-[#ddb167] hover:to-[#c9a557] text-black font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <!-- Button shimmer effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+          
+          <span class="relative z-10">Reserve Now</span>
+          <svg class="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </a>
       </div>
     </div>
 
     <!-- RIGHT: Included / Not Included -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center sm:text-left justify-items-center sm:justify-items-start">
-      <div>
-        <h3 class="text-lg font-semibold mb-3">What’s included</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>3 nights at Nanahouse</li>
-          <li>8 nourishing meals</li>
-          <li>All workshops and sessions</li>
-          <li>Gift basket made with love</li>
-          <li>Access to pool</li>
-          <li>Transportation to beach</li>
+      <div class="group">
+        <h3 class="text-xl font-bold mb-6 text-[#3d2c15] flex items-center justify-center sm:justify-start gap-2">
+          <div class="w-6 h-6 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          What's included
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>3 nights at Nanahouse</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>8 nourishing meals</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>All workshops and sessions</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>Gift basket made with love</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>Access to pool</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-[#ddb167] to-[#e9c68d] rounded-full mt-2 flex-shrink-0"></div>
+            <span>Transportation to beach</span>
+          </li>
         </ul>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-3">What’s not included</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>Flights</li>
-          <li>Transportation from airport</li>
-          <li>Health insurance</li>
-          <li>Massage sessions (optional)</li>
-          <li>Coaching sessions (optional)</li>
+      <div class="group">
+        <h3 class="text-xl font-bold mb-6 text-[#3d2c15] flex items-center justify-center sm:justify-start gap-2">
+          <div class="w-6 h-6 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </div>
+          What's not included
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Flights</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Transportation from airport</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Health insurance</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Massage sessions (optional)</span>
+          </li>
+          <li class="flex items-start gap-3 text-[#4b3a2f] group-hover:text-[#3d2c15] transition-colors">
+            <div class="w-2 h-2 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+            <span>Coaching sessions (optional)</span>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 
   <!-- SCHEDULE: Below, Centered -->
-  <div class="max-w-4xl mx-auto mt-20 bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-xl">
-    <h3 class="text-2xl md:text-3xl font-bold text-[#4b3a2f] mb-8 text-center">
-      What a Day Looks Like
-    </h3>
+  <div class="relative max-w-4xl mx-auto mt-24 bg-white/90 backdrop-blur-xl border border-white/40 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#f8f5ec]/20 via-transparent to-[#ddb167]/10"></div>
     
-    <div class="grid gap-4 md:gap-6">
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">8:00 – 9:30</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Yoga</span>
-      </div>
+    <div class="relative z-10">
+      <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4b3a2f] to-[#6e5843] bg-clip-text text-transparent mb-12 text-center">
+        What a Day Looks Like
+      </h3>
       
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">10:00 – 11:00</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Breakfast</span>
-      </div>
-      
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">11:30 – 13:00</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">"Permission to Wonder" Workshop</span>
-      </div>
-      
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">13:00 – 14:30</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Lunch</span>
-      </div>
-      
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">14:30 – 16:30</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Free Time</span>
-      </div>
-      
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">16:30 – 18:00</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Somatic Ritual Workshop</span>
-      </div>
-      
-      <div class="flex items-center justify-between p-4 bg-gradient-to-r from-[#f8f5ec]/50 to-transparent rounded-xl border-l-4 border-[#4b3a2f]">
-        <span class="font-bold text-[#4b3a2f] text-sm md:text-base">19:00</span>
-        <span class="text-[#3d2c15] text-sm md:text-base">Dinner</span>
+      <div class="grid gap-4 md:gap-6">
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">8:00 – 9:30</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Yoga</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">10:00 – 11:00</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Breakfast</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">11:30 – 13:00</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">"Permission to Wonder" Workshop</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">13:00 – 14:30</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Lunch</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">14:30 – 16:30</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Free Time</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">16:30 – 18:00</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Somatic Ritual Workshop</span>
+        </div>
+        
+        <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-[#f8f5ec]/60 via-[#f8f5ec]/30 to-transparent rounded-2xl border-l-4 border-[#4b3a2f] hover:border-[#ddb167] transition-all duration-300 hover:-translate-x-2 hover:shadow-lg relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#ddb167]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="relative z-10 font-bold text-[#4b3a2f] text-sm md:text-base">19:00</span>
+          <span class="relative z-10 text-[#3d2c15] text-sm md:text-base font-medium">Dinner</span>
+        </div>
       </div>
     </div>
   </div>
