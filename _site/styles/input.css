@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animations */
+@layer utilities {
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+    animation-delay: 0.2s;
+  }
+}
+
+/* Global styles */
+@layer base {
+  body {
+    @apply text-text-primary font-body;
+  }
+  
+  h1, h2, h3, nav a {
+    @apply font-heading;
+  }
+}
+
+/* Fix for mobile viewport height issues */
+.mobile-hero {
+    min-height: 100vh;
+    min-height: 100svh; /* For newer browsers with better mobile support */
+}
+
+/* Ensure proper text sizing on mobile */
+@media (max-width: 640px) {
+  .mobile-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  .mobile-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+
