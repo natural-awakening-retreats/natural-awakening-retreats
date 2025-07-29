@@ -64,7 +64,7 @@ layout: default
   %}
 
   {% include facilitator_left.html
-    name="Lindsey Barrett"
+    name="Lindsay Barrett"
     quote="Chef"
     quote_type="job"
     image="/assets/images/lindsey-barrett.jpg"
