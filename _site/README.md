@@ -1,4 +1,4 @@
-# Natural Awakening Retreats
+Natural Awakening Retreats
 
 > Natural Awakening Retreats made for you with love.
 
@@ -17,3 +17,4 @@ This is the source code for the official (open) Hub website, built using [Jekyll
 ├── styles/base.css      # Tailwind CSS and custom styles
 ├── index.md             # Main landing page (uses the default layout)
 ├── _config.yml          # Jekyll config file
+```

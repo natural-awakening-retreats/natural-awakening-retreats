@@ -1,9 +1,10 @@
 ---
 layout: default
 ---
-
 {% include hero.html %}
 {% include about.html %}
+
+{% include facilitators-header.html %}
 
 <section id="facilitators">
   {% include facilitator_right.html
@@ -16,7 +17,7 @@ layout: default
 
     This means that as we move through life we continue to wear masks and costumes to hide these parts of us.
 
-    The invitation in this workshop would be to recognize these parts of us and then integrate them so we can move forward and claim all of who we are. 
+    The invitation in this workshop would be to recognize these parts of us and then integrate them so we can move forward and claim all of who we are.
     Only then can we be truly free."
   %}
 
@@ -35,8 +36,8 @@ layout: default
     quote_type="workshop"
     image="/assets/images/tilly-pegrum.jpg"
     handle="tillyartist"
-    bio="Loosen up, forget about expectations of beauty and achievements. By completely abandoning the aim of creating something good, we are able to engage with the process of art making. 
-    The philosophy for her workshops is always about finding playful ways to encourage people to trust themselves and their artistic expression. She wishes to help remove the obstacles and limitations we build for ourselves so that we can really immerse ourselves into a creative flow state. It is marvelous what we can discover and learn about ourselves in this process. 
+    bio="Loosen up, forget about expectations of beauty and achievements. By completely abandoning the aim of creating something good, we are able to engage with the process of art making.
+    The philosophy for her workshops is always about finding playful ways to encourage people to trust themselves and their artistic expression. She wishes to help remove the obstacles and limitations we build for ourselves so that we can really immerse ourselves into a creative flow state. It is marvelous what we can discover and learn about ourselves in this process.
     The workshop will be chaotic, fun and intuitive. It will be colorful and expressive, and a great group activity for bonding, leaving participants with a sense of liberation and lifted self-confidence."
   %}
 
@@ -47,10 +48,10 @@ layout: default
     image="/assets/images/eda-tola.jpg"
     handle="edatolala"
     bio="How do we take care of another body while listening to our own body?
-  How can we experience connectedness through our body, movement, dance & sound ? 
+  How can we experience connectedness through our body, movement, dance & sound ?
   How do we learn to ask, to listen, to respond with care?
   In this workshop we will use different practises and exercises of dance therapy and movement methods connecting us back with our bodies & where we are right now - connecting us with other bodies,
-  listening rather then knowing and feeling rather than reacting. 
+  listening rather then knowing and feeling rather than reacting.
   We will look for ways to open our bodies to movement, dance, sound and reconnect with our senses from a place of care and compassion."
   %}
 
@@ -71,6 +72,7 @@ layout: default
     handle="ohquelinda"
     bio="Lindsay is a seasoned traveller that has been inspired by many different cuisines. She creates delicious, healthy, seasonal meals that are vegan/vegetarian using fresh, locally sourced ingredients. "
   %}
+
 </section>
 
 {% include location.html %}
